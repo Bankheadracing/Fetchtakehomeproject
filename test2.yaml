@@ -1,0 +1,23 @@
+'-body': '{"foo":"bar"}'
+headers: null
+content-type: application/json
+method: POST
+name: sample body up
+url: >-
+  https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body
+
+'-name': sample index up
+url: >-
+  https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/
+
+'-body': '{}'
+headers: null
+content-type: application/json
+method: POST
+name: sample body down
+url: >-
+  https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body
+
+'-name': sample error down
+url: >-
+  https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/error
