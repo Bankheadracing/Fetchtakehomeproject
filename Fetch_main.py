@@ -16,8 +16,11 @@ def check_health(endpoint):
     body = endpoint.get('body')
 
     try:
+        start_time = time.time()
         response = requests.request(method, url, headers=headers, json=body)
-        if 200 <= response.status_code < 300:
+        response_time = time.time() - start_time 
+
+        if 200 <= response.status_code < 300 and response_time <= 0.5:
             return "UP"
         else:
             return "DOWN"
