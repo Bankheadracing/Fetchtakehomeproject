@@ -1,19 +1,28 @@
-'-body': '{"foo":"bar"}'
-headers: null
-content-type: application/json
-method: POST
-name: sample body up
-url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body"
+requests:
+  - name: "sample body up"
+    url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body"
+    method: POST
+    content_type: "application/json"
+    body: '{"foo": "bar"}'
+    headers: null
 
-'-name': sample index up
-url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/"
+  - name: "sample index up"
+    url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/"
+    method: GET
+    content_type: "application/json"
+    body: null
+    headers: null
 
-'-body': '{}'
-headers: null
-content-type: application/json
-method: POST
-name: sample body down
-url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body"
+  - name: "sample body down"
+    url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body"
+    method: POST
+    content_type: "application/json"
+    body: '{}'
+    headers: null
 
-'-name': sample error down
-url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/error"
+  - name: "sample error down"
+    url: "https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/error"
+    method: GET
+    content_type: "application/json"
+    body: null
+    headers: null
