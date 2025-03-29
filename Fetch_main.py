@@ -27,6 +27,7 @@ def check_health(endpoint):
 # Main function to monitor endpoints
 def monitor_endpoints(file_path):
     config = load_config(file_path)
+    requests = config.get('requests,'[])
     domain_stats = defaultdict(lambda: {"up": 0, "total": 0})
 
     while True:
