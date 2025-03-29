@@ -31,7 +31,7 @@ def monitor_endpoints(file_path):
     domain_stats = defaultdict(lambda: {"up": 0, "total": 0})
 
     while True:
-        for endpoint in config:
+        for endpoint in requests:
             domain = endpoint["url"].split("//")[-1].split("/")[0]
             result = check_health(endpoint)
 
