@@ -22,7 +22,7 @@ Before running the script, ensure you have the following Python packages install
 
 Loading Configuration:
 
-- The script loads the configuration from the config.yaml file using the yaml.safe_load() function.
+- The script loads the configuration from the test2.yaml file using the yaml.safe_load() function.
 
 Health Check:
 
