@@ -73,7 +73,7 @@ python Fetch_main.py test2.yaml
 ## Expected Ouput
 
 example.com has 25% availability percentage
----
+
 example.com has 30% availability percentage
 
 
