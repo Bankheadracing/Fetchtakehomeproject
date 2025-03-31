@@ -18,7 +18,31 @@ Before running the script, ensure you have the following Python packages install
 - pyyaml – for reading the YAML configuration file.
 
 
-Fields in test2.yaml:
+## How the Script Works
+
+Loading Configuration:
+
+- The script loads the configuration from the config.yaml file using the yaml.safe_load() function.
+
+Health Check:
+
+- The script checks each endpoint by sending an HTTP request (either GET or POST), depending on the configuration.
+
+- For each request, the script records the status code and response time.
+
+- The endpoint is considered "UP" if the response status code is in the 200-299 range and the response time is below 0.5 seconds. Otherwise, the endpoint is marked as "DOWN".
+
+Logging Results:
+
+- Every 15 seconds, the script prints the availability percentage for each domain. Availability is calculated as the ratio of "UP" responses to total responses for that domain.
+
+Stopping the Monitoring:
+
+- You can stop the monitoring at any time by pressing Ctrl+C in the terminal. The script will catch the KeyboardInterrupt and exit gracefully.
+
+
+
+## Fields in test2.yaml:
 
 Name: A human-readable name for the endpoint.
 
@@ -34,11 +58,24 @@ Headers: Any custom headers needed for the request. Set to null if no headers ar
 
 **** There is no Authorazation needed to be stored in this yaml as this is only test environment*****
 
-Usage:
+## Usage:
 
 Save your endpoints configuration in a test2.yaml file.
 
 Run the monitoring script by passing the path to the YAML configuration file as an argument.
+
+
+## Command line to run Script
+
+python Fetch_main.py test2.yaml
+
+
+## Expected Ouput
+
+example.com has 25% availability percentage
+---
+example.com has 30% availability percentage
+
 
 
 
