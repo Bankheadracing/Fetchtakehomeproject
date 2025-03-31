@@ -76,6 +76,12 @@ example.com has 25% availability percentage
 
 example.com has 30% availability percentage
 
+## Changes made to code
+
+- First thing I noticed was in line 14 there was no default method, so I added GET to be the default function
+- Second thing I noticed was the job ran fine but the results kept printing out a steady 25% avability, then I realised this was because there was no response time added to logice. I added on line 23 to the if statement to include response time less than equal to 0.5.
+- I then quickly realized I needed to create a variable response time and start time (this can be seen on line 19 and 21)
+- 
 
 
 
