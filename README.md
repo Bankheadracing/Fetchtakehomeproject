@@ -14,7 +14,31 @@ This Python script monitors the health of multiple endpoints, tracking their ava
 
 Before running the script, ensure you have the following Python packages installed:
 
-- `requests` – for making HTTP requests.
-- `pyyaml` – for reading the YAML configuration file.
+- requests – for making HTTP requests.
+- pyyaml – for reading the YAML configuration file.
+
+
+Fields in test2.yaml:
+
+Name: A human-readable name for the endpoint.
+
+URL: The full URL of the endpoint to monitor.
+
+Method: The HTTP method (GET, POST, etc, etc)
+
+Content_type: This is set to application/json
+
+Body: The body to send in a POST request, formatted as a JSON string. Set to null for GET requests.
+
+Headers: Any custom headers needed for the request. Set to null if no headers are required.
+
+**** There is no Authorazation needed to be stored in this yaml as this is only test environment*****
+
+Usage:
+
+Save your endpoints configuration in a test2.yaml file.
+
+Run the monitoring script by passing the path to the YAML configuration file as an argument.
+
 
 
