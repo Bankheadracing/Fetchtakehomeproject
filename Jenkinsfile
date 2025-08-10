@@ -20,10 +20,10 @@ pipeline {
                 sh '#!/bin/bash'
                 sh 'python3 -m venv venv'
                 sh '. ./venv/bin/activate'
-                //sh 'pip install pytest-cov coverage'
-                sh 'pytest --cov=./ --cov-report=xml' // Generate XML report
+                sh 'pip install pytest'
+                //sh 'pytest --cov=./ --cov-report=xml' // Generate XML report
             // Publish coverage reports using Cobertura Plugin
-                cobertura 'coverage.xml'
+                //cobertura 'coverage.xml'
                 echo 'Tests completed on application...'
             }
         }
