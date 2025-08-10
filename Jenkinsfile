@@ -14,17 +14,12 @@ pipeline {
                 echo 'Build process complete...'
             }
         }
-         /*If you wish to install a non-Debian-packaged Python package,
-    create a virtual environment using python3 -m venv path/to/venv.
-    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-    sure you have python3-full installed.*/
         stage('Test') {
             steps {
                 echo 'Running tests on application...'
                 sh '#!/bin/bash'
                 sh 'python3 -m venv venv'
                 sh '. ./venv/bin/activate'
-                sh 'sudo apt install python3-pytest-cov python3-coverage'
                 //sh 'pip install pytest-cov coverage'
                 sh 'pytest --cov=./ --cov-report=xml' // Generate XML report
             // Publish coverage reports using Cobertura Plugin
