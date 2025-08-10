@@ -8,9 +8,7 @@ pipeline {
 
                 sh '#!/bin/bash'
                 sh 'python3 -m venv venv' // Create a virtual environment
-                sh 'find . -name activate' 
-                //sh '. .venv/bin/activate' // Activate and install
-                sh 'pip install'
+                sh '. .venv/bin/activate && pip install -r requirements.txt' // Activate and install
                 
                 echo 'Build process complete...'
             }
