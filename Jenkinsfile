@@ -8,6 +8,7 @@ pipeline {
 
                 sh '#!/bin/bash'
                 sh 'python3 -m venv venv' // Create a virtual environment
+                sh 'pip freeze > requirements.txt'
                 sh '. ./venv/bin/activate && pip install -r requirements.txt' // Activate and install
                 
                 echo 'Build process complete...'
