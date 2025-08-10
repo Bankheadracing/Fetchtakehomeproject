@@ -19,7 +19,7 @@ pipeline {
                 echo 'Running tests on application...'
                 sh '#!/bin/bash'
                 sh 'python3 -m venv venv'
-                sh './venv/bin/activate'
+                sh '. ./venv/bin/activate'
                 sh 'pip install pytest-cov coverage'
                 sh 'pytest --cov=./ --cov-report=xml' // Generate XML report
             // Publish coverage reports using Cobertura Plugin
