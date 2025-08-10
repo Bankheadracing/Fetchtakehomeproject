@@ -7,7 +7,8 @@ pipeline {
                 echo 'Starting the build process...'
                 
                 sh 'python3 -m venv venv' // Create a virtual environment
-                sh 'source venv/bin/activate && pip install -r requirements.txt' // Activate and install
+                //sh 'source venv/bin/activate && pip install -r requirements.txt' // Activate and install
+                
                 
                 echo 'Build process complete...'
             }
