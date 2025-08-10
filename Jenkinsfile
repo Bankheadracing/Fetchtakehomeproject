@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Starting the build process...'
-                
+
+                sh '#!/bin/bash'
                 sh 'python3 -m venv venv' // Create a virtual environment
                 sh '.venv/bin/activate' // Activate and install
                 sh 'pip install'
@@ -16,6 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests on application...'
+                sh '#!/bin/bash'
                 sh 'python3 -m venv venv'
                 sh '.venv/bin/activate'
                 sh 'pip install pytest-cov coverage'
