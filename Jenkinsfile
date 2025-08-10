@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sh 'python python Fetch_main.py test2.yaml'
+                sh 'python3 Fetch_main.py test2.yaml'
                 echo 'Deployed the application to Terminal...'
             }
         }
